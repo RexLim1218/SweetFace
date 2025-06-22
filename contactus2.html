@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+ <head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="style.css">
+ </head>
+
+
+ <body>
+     <!--navigation bar menu-->
+    <header>
+        <div class="head"><a href="home.html"> <img src="image/Cosmetic1.png"alt="Sweet Face"class="logo1" /></a></div>
+        <div class="menu" id="menu1">
+        <ul class="menu-ul">
+          <a href="Login Page.html" class="a-menu"><li>New</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Product</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Promotion</li></a>
+          <a href="aboutus3.html" class="a-menu"><li>About Us</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Log In</li></a>
+          <a href="Login Page.html" class="a-menu"><li>CART</li></a>
+          <div class="search-box">
+            <form>
+                <input type="text" placeholder="Search..." name="search" class="search-input"/> 
+            </form>
+          </div>
+        </ul>
+        </div>    
+    </header> 
+             <!--contact us content-->
+    <form>
+    <div class="container">
+        <h1 class="text1">Contact Us</h1>
+         <p>For general queries or comments, please fill up the form below and we will get back to you as soon as possible.<br>
+            Thank you in advance. Your input is important to us and will help us to serve you better on your next visit.</p>
+         <div class="contact-box">
+             <div class="contact-left">
+                 <h3>Sent your request</h3>
+                <div class="input-row">
+                     <div class="input-group">
+                         <label>Name</label>
+                         <input type="text" name="Name" required placeholder="Write your name" id="info1">
+                     </div>
+                     <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" name="Phone" required placeholder="Write your phone number" id="info2" >
+                    </div>
+                </div>
+                 <div class="input-row">
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="Email" required placeholder="Write your email address" id="info3">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject</label>
+                        <input type="text" name="Subject" required placeholder="Write your Subject" id="info4" >
+                    </div>
+                </div>
+                    <label>Message</label>
+                    <textarea rows="5" id="info5" placeholder="Your message" required ></textarea>
+                     <button type="submit"  onclick="return checkforblank()">SEND</button>
+                </div>
+           
+            
+             <div class="contact-right">
+                 <h3>Reach Us</h3>
+                 <table>
+                     <tr>
+                         <td>Email</td>
+                         <td><a style="color: white;" href="mailto:contactus@sweetface.com">contactus@sweetface.com</a></td>
+                     </tr>
+                     <tr>
+                        <td>Phone</td>
+                        <td><a style="color: white;" href="tel:+60 123456789">+60 123456789</a></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>A101 , First Floor,<br>
+                            SweetFace ,Kuala Lumpur<br>
+                            Malaysia</td>
+                    </tr>
+                 </table>
+             </div>
+            </div>
+        </div>
+        </form>
+        <!--pop up message successfully-->
+        <script>
+            function checkforblank(){
+                if(document.getElementById('info1').value==""){
+                    alert('Please enter all the information. Thank You.')
+                    return false;
+                }else if(document.getElementById('info2').value==""){
+                    alert('Please enter all the information. Thank You.')
+                    return false;
+                }else if(document.getElementById('info3').value==""){
+                    alert('Please enter all the information. Thank You.')
+                    return false;
+                }else if(document.getElementById('info4').value==""){
+                    alert('Please enter all the information. Thank You.')
+                    return false;
+                }else if(document.getElementById('info5').value==""){
+                    alert('Please enter all the information. Thank You.')
+                    return false;
+                }else{
+                    alert("Your message has submitted successfully.")
+                    return true;
+                }
+            }
+        </script>
+
+         <footer>
+            <div><img src="image/Cosmetic1.png" class="logo-footer"></div>
+               <div class="quick-link1">
+                  <div class="titlefooter1">Sweet Face</div>
+                  <ul>
+                     <li><a href="contactus2.html" class="a-link">Contact Us</a></li>
+                  </ul>
+               </div>
+               <div class="quick-link2">
+                <div class="titlefooter2">Customer Services</div>
+                <ul>
+                   <li><a href="TnC2.html" class="a-link">Term & Conditions</a></li>
+                   <li><a href="FAQS2.html" class="a-link">FAQ</a></li>
+                </ul>
+              </div>
+           <p class="copyrights">
+               <i>Copyright © 2021 Sweet Face. All Rights Reserved</i>
+           </p>
+        </footer>
+ </body>
+</html>

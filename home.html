@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Home</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="head"><a href="home.html"> <img src="image/Cosmetic1.png"alt="Sweet Face"class="logo1" /></a></div>
+    <div class="menu" id="menu1">
+    <ul class="menu-ul">
+      <a href="Login Page.html" class="a-menu"><li>New</li></a>
+      <a href="Login Page.html" class="a-menu"><li>Product</li></a>
+      <a href="Login Page.html" class="a-menu"><li>Promotion</li></a>
+      <a href="aboutus3.html" class="a-menu"><li>About Us</li></a>
+      <a href="Login Page.html" class="a-menu"><li>Log In</li></a>
+      <a href="Login Page.html" class="a-menu"><li>CART</li></a>
+      <div class="search-box">
+        <form>
+            <input type="text" placeholder="Search..." name="search" class="search-input"/> 
+        </form>
+      </div>
+    </ul>
+    </div>    
+</header> 
+  
+<!----manual slideshow--->
+<div class="design">
+<div class="home">
+  <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <a href="Login Page.html">
+        <img src="image/Cherry_Blossom_Banner_1920x600_3a1282cb-2dc5-4c45-842c-aa2149126096.png" style="width:100%">
+        </a>
+      </div>
+      
+      <div class="mySlides fade">
+        <a href="Login Page.html">
+        <img src="image/Banner02_Merdeka_Special_Deal_desktop.png" style="width:100%">
+        </a>
+      </div>
+      
+      <div class="mySlides fade">
+        <a href="Login Page.html">
+        <img src="image/brighteningporeserum-promo-july.png" style="width:100%">
+        </a>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+  </div>
+      <br>
+      
+   <div style="text-align:center">
+       <span class="dot" onclick="currentSlide(1)"></span> 
+       <span class="dot" onclick="currentSlide(2)"></span> 
+       <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+</div> 
+<br/><br/>
+<!---Hot Sales Product--->
+<form align="center">
+  <h1 style="background: linear-gradient(to bottom, rgb(40, 0, 58),rgb(250, 92, 145));color: white;width: 30%; margin-left: 35%;">Hot Sales Product</h1>
+  <table align="center" >
+      <tr>
+          <td>
+            <a href="Login Page.html">
+              <img src="image/sets4_cherry.png" alt="" style="width: 300px;">
+            </a>
+          </td>
+          <td style="width: 5px;"><span></span></td>
+          <td>
+            <a href="Login Page.html">
+              <img src="image/serum.green.jpg" alt="" style="width: 300px;">
+            </a>
+          </td>
+          <td style="width: 5px;"><span></span></td>
+          <td>
+            <a href="Login Page.html">
+              <img src="image/mask1_my.png" alt="" style="width: 300px;">
+            </a>
+          </td>
+          <td style="width: 5px;"><span></span></td>
+          <td>
+            <a href="Login Page.html">
+              <img src="image/mask3_carrot.png" alt="" style="width: 300px;">
+            </a>
+          </td>
+      </tr>
+      <tr>
+        <td>Jeju Cherry Blossom Tone-Up Cream SPF30 PA++<hr></td>
+        <td style="width: 5px;"><span></span></td>
+        <td>NEW Green Tea Seed Serum 80ml<hr></td>
+        <td style="width: 5px;"><span></span></td>
+        <td>MY Real Squeeze Mask EX 200ml<hr></td>
+        <td style="width: 5px;"><span></span></td>
+        <td>Jeju Root Energy Mask 25ml<hr></td>
+      </tr>
+
+      <tr>
+          <td class="Prc">RM90.00</td>
+          <td style="width: 5px;"><span></span></td>
+          <td class="Prc">RM118.00</td>
+          <td style="width: 5px;"><span></span></td>
+          <td class="Prc">RM5.00</td>
+          <td style="width: 5px;"><span></span></td>
+          <td class="Prc">RM6.00</td>
+      </tr>
+  </table>
+</form>
+
+<!----Animation and video-->
+<div class="aniVideo">
+<aside class="slider"></aside>
+<aside class="video">
+  <video controls poster="image/video.png">
+    <source src="Green Tea Line_ My 6 Skincare Routines.mp4" type="video/mp4" />
+    <p>Upgrade your browser to HTML5.</p>                            
+ </video> 
+</aside>
+
+</div>
+</div>   
+<!---automatic slideshow--->
+  <script>
+      /*manual slideshow*/
+      var slideIndex = 1;
+      showSlides(slideIndex);
+          
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+          
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+          
+      function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          }
+          /*automatic slideshow*/
+          var slideIndex = 0;
+          showSlides();
+
+          function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); // Change image every 5 seconds
+          }
+  </script>
+
+<footer>
+  <div><img src="image/Cosmetic1.png" class="logo-footer"></div>
+     <div class="quick-link1">
+        <div class="titlefooter1">Sweet Face</div>
+        <ul>
+           <li><a href="contactus2.html" class="a-link">Contact Us</a></li>
+        </ul>
+     </div>
+     <div class="quick-link2">
+      <div class="titlefooter2">Customer Services</div>
+      <ul>
+         <li><a href="TnC2.html" class="a-link">Term & Conditions</a></li>
+         <li><a href="FAQS2.html" class="a-link">FAQ</a></li>
+      </ul>
+    </div>
+ <p class="copyrights">
+     <i>Copyright © 2021 Sweet Face. All Rights Reserved</i>
+ </p>
+</footer>
+</body>
+                
+
+
+</html>

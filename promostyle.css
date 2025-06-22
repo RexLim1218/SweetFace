@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+body{
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+.head{
+    background-color: black;
+}
+.logo1{
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu1{
+  position:sticky;
+  height: 75px;
+  width: 100%;
+}
+
+.menu{
+    background: rgb(76, 38, 143);
+    text-align:center;
+    
+}
+
+.menu-ul{
+    margin: 0px;
+    padding: 0;
+    display: inline;
+}
+
+.menu-ul li {
+    font-size: 17px;
+    list-style: none;
+    display:inline-block;
+    padding: 25px 25px 25px 25px;
+}
+
+.a-menu{
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu-ul li:hover{
+    color: black;
+    background: rgb(213, 242, 255);
+    transform:scale(1.1);
+}
+
+.search-box{
+    border: 3px solid black;
+    border-radius:70px;
+    background: white;
+    width:max-content;
+    display:inline-block;
+}
+
+.search-box:hover{  
+    box-shadow:0 0 10px 2px rgb(135, 215, 252);
+    border: 1px solid rgb(192, 231, 250);
+}
+
+.search-input{
+    width: 252px;
+    border:none;
+    background:transparent;
+    margin:15px 0px 15px 10px ;
+    vertical-align: center;
+}
+
+.amtn {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: radial-gradient( #614385 , #516395); 
+    height: 25vh;
+}
+  
+.amtn h5 {
+    position: absolute;
+    left: 50%;
+    top: 4%;
+    transform: translate(-50%, -50%);
+    display: block;
+    color: #0a043c;
+    font-size: 150px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+  
+.amtn h5::before {
+    content: "PROMOTION";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent 0,
+      transparent 2px,
+      #CCCCFF 2px,
+      #CCCCFF 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+    transition: 1s;
+}
+  
+.amtn h5::after {
+    content: "PROMOTION";
+    position: absolute;
+    color: transparent;
+    background-image: repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 2px,
+      #CCCCFF 2px,
+      #CCCCFF 4px
+    );
+    -webkit-background-clip: text;
+    top: 0px;
+    left: 0px;
+    transition: 1s;
+}
+  
+.amtn h5:hover:before {
+    top: 10px;
+    left: 10px;
+}
+  
+.amtn h5:hover:after {
+    top: -10px;
+    left: -10px;
+} 
+
+body{
+    background-image: linear-gradient( to right,#70e1f5,#ffd194);
+}
+
+.button{
+    background: #fff;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: #212121;
+    display: inline-block;
+    margin: 0;
+    border-radius: 6px;
+}
+
+.rainbow-text{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 3.3rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: -4px 4px #ef3550,
+                 -8px 8px #f48fb1,
+                 -12px 12px #7e57c2,
+                 -16px 16px #2196f3,
+                 -20px 20px #26c6da,
+                 -24px 24px #43a047,
+                 -28px 28px #eeff41,
+                 -32px 32px #f9a825,
+                 -36px 36px #ff5722;
+    
+}
+
+.row{
+    margin-top: 300px;
+    margin-bottom: 250px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.small-container{
+    max-width: 1250px;
+    margin: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.col-1{
+    flex-basis: 25%;
+    padding: 50px;
+    min-width: 100px;
+    margin-bottom: 50px;
+    transition: transform 1.0s;
+}
+.col-1 img{
+    width: 100%;
+}
+
+.title-1{
+    font-size: 25px;
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+.price{
+    color: #5D6D7E ;
+    font-size: 23px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.col-1:hover{
+    transform: scale(1.1);
+}
+
+.btn{
+    font-size: 22px;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 35px;
+    background-color: #40E0D0;
+    border-radius: 25px;
+    color: #fff;
+    border: 1px solid #40E0D0;
+    letter-spacing: 1.5px;
+    margin-top: 25px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #40E0D0;
+    transition: 0.2s ease;
+}
+
+
+footer{
+    background: rgba(0,0,0,1.0);
+    margin: auto;
+    text-align: right;
+    z-index: 2;
+}
+
+.logo-footer{
+    float: left;
+    width: 200px;
+    vertical-align: bottom;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.quick-link1{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.quick-link2{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 25%; 
+    margin-right:5%;
+}
+
+
+.titlefooter1 {
+    text-decoration: underline;
+}
+
+.titlefooter2 {
+    text-decoration: underline;
+}
+
+
+.quick-link1 li   {
+    list-style: none;
+    padding: 10px 0px;
+    font-weight: 300;
+}
+
+.quick-link2 li {
+    list-style: none;
+    padding: 10px 0px;
+    font-weight: 300;
+}
+
+.a-link{
+    text-decoration: none;
+    color: white;
+
+}
+
+.a-link:hover {
+    color: #fd5e53;
+}
+
+.copyrights{
+    font-size: 16px;
+    font-family: verdana, arial, helvecita , sans-serif;
+    text-align: center;
+    margin: auto;
+    color: white;
+
+}

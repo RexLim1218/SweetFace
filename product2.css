@@ -1,0 +1,144 @@
+body{
+    background:   -webkit-linear-gradient(rgb(224, 246, 255),rgb(28, 6, 68));
+
+}
+
+.homebtn a{
+    margin-left: 160px;
+    font-size: larger;
+    color: black;
+    text-decoration: none;
+    border-style: solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.side-title{
+    margin-left: 400px;
+    font-size: 30px;
+}
+
+.sub-title {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #000, rgb(26, 4, 88) 50%, rgb(112, 222, 255) 60%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    transition: background 0.2s ease-out;
+    white-space: nowrap;
+  }
+  
+  span {
+    position: relative;
+  }
+  
+  span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: rgb(6, 6, 88);
+    bottom: 9px;
+    transition: all 0.2s ease-out;
+  }
+  
+  .sub-title:hover {
+    background-position: 0 11px;
+  }
+  
+  span:hover:before {
+    transform: translateY(10px)
+  }
+
+.container{
+    display: flex;
+}
+
+
+table{
+    margin-left: 10%;
+    width: 15%;
+    max-height: 400px;
+}
+
+.product-title{
+    background: #444546;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-cate {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-cate a{
+    text-decoration: none;
+    color: #292929;
+    font-weight:600;
+    font-size: 17px;
+}
+
+.product-cate a:hover{
+    color: rgb(0, 217, 255);
+    font-size: 150%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 3%;
+    grid-template-rows: 33% 33% 33%;
+    grid-row-gap: 18%;
+}
+
+
+.grid-item{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.grid-item img{
+    transition: 0.5s all;
+}
+
+.grid-item:hover img{
+    opacity: 0.7;
+}
+
+.grid-item .buy-btn{
+    background:rgb(172, 238, 255);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.3s all;
+    border-width: 3px;
+}
+
+.grid-item:hover .buy-btn{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+h5{
+    text-align: center;
+    font-size: 18px;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.buy-btn{
+    margin-left: 33%;
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="UTF-8"/>
+     <title>Registration</title>
+     <link href="style.css" rel="stylesheet" type="text/css"/>
+     <link href="register.css" rel="stylesheet" type="text/css"/>
+    <script src="password.js" type="text/javascript"></script>
+
+</head>
+   
+<body>
+    <header>
+        <div class="head"><a href="home.html"> <img src="image/Cosmetic1.png"alt="Sweet Face"class="logo1" /></a></div>
+        <div class="menu" id="menu1">
+        <ul class="menu-ul">
+          <a href="Login Page.html" class="a-menu"><li>New</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Product</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Promotion</li></a>
+          <a href="aboutus3.html" class="a-menu"><li>About Us</li></a>
+          <a href="Login Page.html" class="a-menu"><li>Log In</li></a>
+          <a href="Login Page.html" class="a-menu"><li>CART</li></a>
+          <div class="search-box">
+            <form>
+                <input type="text" placeholder="Search..." name="search" class="search-input"/> 
+            </form>
+          </div>
+        </ul>
+        </div>    
+    </header> 
+    
+
+    <div class="register">
+    <form class="container" action="Login Page.html" >
+        <div class="detail">
+            <div class="title">Registration Form</div>
+            <hr>
+            <div class="input_field">
+                <label>First Name</label>
+                <input type="text" id="firstname" class="input" size="25" autofocus required/>
+            </div>
+            <div class="input_field">
+                <label>Last Name</label>
+                <input type="text" id="lastname" class="input" size="25" required/>
+            </div>
+        
+            <div class="input_field">
+                <label>Phone Number</label>
+                <input type="tel" class="input" size="25" required/>
+            </div>
+
+            <div class="input_field">
+                <label>Email Address</label>
+                <input type="email" class="input" size="50" required/>
+            </div>
+            
+            <div class="input_field">
+                <label>Password</label>
+                <input type="password" id="myInput" class="input" minlength="8" maxlength="15" size="15" required/>
+            </div>
+            
+            <div class="requirement">
+                <caption>*Minimum 8 Maximum 15 characters</caption>
+            </div>
+
+            <div class="input_field">
+                <label class="check1">
+                    <input type="checkbox" onclick="myFunction()" />
+                    <span class="checkmark"></span>
+                </label>
+                <span>Show Password</span>
+            </div>
+
+            <div class="input_field">
+                <label>Confirm Password</label>
+                <input type="password" id="psw2" class="input"   required/>
+            </div>
+
+
+            <div class="input_field">
+                <label class="check">
+                    <input type="checkbox" required>
+                    <span class="checkmark"></span>
+                </label>
+                <p>Agreed to<a href="TnC2.html"> &nbsp;terms and conditions</a></p>
+            </div>
+
+            <div class="input_field">
+                <input type="submit" value="Register" onclick="return Validate()" class="btn" >
+            </div>
+        </div>
+    </form>
+    </div>
+
+    
+    <footer>
+        <div><img src="image/Cosmetic1.png" class="logo-footer"></div>
+           <div class="quick-link1">
+              <div class="titlefooter1">Sweet Face</div>
+              <ul>
+                 <li><a href="contactus2.html" class="a-link">Contact Us</a></li>
+              </ul>
+           </div>
+           <div class="quick-link2">
+            <div class="titlefooter2">Customer Services</div>
+            <ul>
+               <li><a href="TnC2.html" class="a-link">Term & Conditions</a></li>
+               <li><a href="FAQS2.html" class="a-link">FAQ</a></li>
+            </ul>
+          </div>
+       <p class="copyrights">
+           <i>Copyright © 2021 Sweet Face. All Rights Reserved</i>
+       </p>
+    </footer>
+</body>
+</html>

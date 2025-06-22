@@ -1,0 +1,199 @@
+body{
+  background:   -webkit-linear-gradient(rgb(224, 246, 255),rgb(28, 6, 68));
+}
+/*SLIDE SHOW*/
+
+.home{
+    box-sizing: border-box;
+    height: 50vh;
+    background:   -webkit-linear-gradient(rgb(224, 246, 255),rgb(28, 6, 68));
+
+}
+
+.mySlides {display: none}
+.mySlides.fade{vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+/*hot selling*/
+#featured{
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.product{
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.product img{
+  transition: 0.3s all;
+}
+
+
+.product:hover img{
+  opacity: 0.7;
+}
+
+.product .buy-btn{
+  background:rgb(114, 114, 240);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.product:hover .buy-btn{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+hr{
+  width: 30px;
+  height: 2px;
+  background-color: rgb(114, 114, 240);
+}
+
+.star{
+  padding: 10px 0;
+}
+
+.star i{
+  font-size: 0.8rem;
+  color: goldenrod;
+}
+/*Video box*/
+.aniVideo{
+    -webkit-flex: 1 1 100px;
+    flex: 1 1 100px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-content: flex-start;
+    align-content: flex-start;   
+ }
+
+
+.video{
+  display: block;
+  margin-top: 5%;
+}
+
+video{
+  width: 70%;
+}
+
+aside:first-of-type {
+  -webkit-flex: 1 1 100px;
+  flex: 1 1 100px;
+}
+
+aside:last-of-type {
+  -webkit-flex: 1 1 100px;
+  flex: 2 2 100px;
+}
+
+
+
+/*Animation*/
+
+.slider{
+  width: 25%;
+  margin-left: 15%;
+  margin-top: 5%;
+  background: url(image/JejuOEC.png);
+  z-index: 2;
+  animation: slider 12s infinite;
+  background-repeat: no-repeat;
+  
+}
+
+@keyframes slider{
+  25%{
+  background:url(image/SuperVPCM.png);
+  background-repeat: no-repeat;
+  }
+  50%{
+      background: url(image/BrighPSS.png);
+      background-repeat: no-repeat;
+  }
+  75%{
+      background: url(image/greenteafoamcleanser.png);
+      background-repeat: no-repeat;
+  }
+  100%{
+      background: url(image/JejuOEC.png);
+      background-repeat: no-repeat;
+  }
+}

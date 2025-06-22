@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <script src="product.js"></script>
+<style>
+  body{
+    background:   -webkit-radial-gradient(rgb(170, 225, 247),rgb(28, 6, 68));
+}
+  .form{
+    display: flex;
+    margin-left: 15%;
+    box-sizing: border-box;
+  }
+
+fieldset.form1{
+  margin-left: 35px;
+  border-width: 7px;
+    border-style: double;
+    border-color:white  black;
+}
+fieldset.form2{
+  border-width: 7px;
+  border-style: double;
+  border-color: white black;
+}
+table{
+    border-collapse: collapse;
+}
+  .form2{
+    width: 70%;
+    margin-left: 15%;
+  }
+
+  .value{
+      text-align: center;
+      vertical-align: center;
+      width: 40%;
+  }
+  select{
+      border-style: dashed;
+  }
+  select:hover{
+      background: rgb(151, 119, 187);
+  }
+
+th{
+      background:#9da2a7;
+      height: 30px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: black;
+  }
+.bdr{
+    background: white;
+    border-width: 1px;
+    border-color: black;
+    border-style: dashed;
+
+}
+.numbers{
+    border-style: dashed;
+    border-width: 1px;
+    border-color: black;
+    background: white;
+}
+  .checkout[type=submit] {
+            border-radius: 4px;
+            background-color: rgb(12, 156, 175);
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 8px 0px 8px 0px;
+            width: 200px;
+            margin-right: 5%;
+            margin-left: 75%;
+            margin-bottom: 5%;
+        }
+
+.checkout[type=submit]:hover {
+            background-color: rgb(255, 60, 0);
+            width: 250px;
+            transition: all 1s;
+        }
+
+.checkout[type=submit]:active {
+            color: black;
+        }
+</style>
+   
+</head>
+   
+<body>
+  <header>
+    <div class="head"><a href="home2.html"> <img src="image/Cosmetic1.png"alt="Sweet Face"class="logo1" /></a></div>
+    <div class="menu" id="menu1">
+    <ul class="menu-ul">
+      <a href="new.html" class="a-menu"><li>New</li></a>
+      <a href="product.html" class="a-menu"><li>Product</li></a>
+      <a href="promotion.html" class="a-menu"><li>Promotion</li></a>
+      <a href="aboutus.html" class="a-menu"><li>About Us</li></a>
+      <a href="Login Page.html" class="a-menu"><li>Log Out</li></a>
+      <a href="cart.html" class="a-menu"><li>CART</li></a>
+      <div class="search-box">
+        <form>
+            <input type="text" placeholder="Search..." name="search" class="search-input"/> 
+        </form>
+      </div>
+    </ul>
+    </div>    
+</header> 
+
+<!-----cart------>
+
+<form action="thanks.html" onsubmit="return submitted();">
+  <fieldset class="form2">
+    <legend align="center"><h1 style="font-size: 60px;">Cart</h1></legend>
+    <table class="cart" align="center" width=100%; >
+      <tr>
+        <th style="font-weight: bold;" colspan="2">Product</th>
+        <th>Price (Rm)</th>
+        <th>Quantity</th>
+        <th>Amount (Rm)</th>
+      </tr>
+        
+        <tr>
+          <td>
+              <img src="image/BrighPSS.png" style="height: 100px; width: 100px;">
+          </td>
+          <td class="value">
+            <select id="product1" name="product1" onchange="display(this,1);">
+              <option selected style="text-align: center;">Please select the product that you want.</option>
+              <optgroup label="Cleanser">
+              <option value="41.00">Green Tea Foam Cleanser 150ml</option>
+              <option value="38.00">Bija Trouble Facial Foam 150ml</option>
+              <option value="24.00">Blueberry Rebalancing 5.5 Cleanser 100ml</option>
+              <option value="46.00">Brightening Pore Facial Cleanser 150ml</option>
+              <option value="33.00">Apple Seed Soft Cleansing Foam 150 ml</option>
+              <option value="39.00">Blueberry Rebalancing Cleansing Water 200ml</option>
+              </optgroup>
+
+              <optgroup label="Toner">
+                <option value="39.00">Blueberry Rebalancing Skin 150ml</option>
+                <option value="70.00">Bija Trouble Skin 200ml</option>
+                <option value="75.00">Jeju Volcanic Pore Toner 2X 200ml</option>
+                <option value="84.00">Green Tea Seed Skin 200ml</option>
+                <option value="112.00">Brightening Pore Skin 150ml</option>
+                <option value="64.80">Jeju Cherry Blossom Skin 200ml</option>
+              </optgroup>
+              
+              <optgroup label="Serum">
+                <option value="118.00">NEW Green Tea Seed Serum 80ml</option>
+                <option value="158.00">Brightening Pore Serum 30ml</option>
+              </optgroup>
+
+              <optgroup label="Mask">
+                <option value="5.00">My Real Squeeze Mask EX 20ml</option>
+                <option value="12.00">Soothing Moment for Skin Mask (MADECASSOSIDE) 25ml</option>
+                <option value="6.00">Jeju Root Energy Mask 25ml</option>
+                <option value="60.00">Super Volcanic Pore Clay Mask 2X</option>
+              </optgroup>
+
+              <optgroup label="Moisturizers">
+                <option value="61.00">Bija Trouble Lotion 100ml</option>
+                <option value="76.50">Jeju Cherry Blossom Jelly Cream 50ml</option>
+                <option value="119.00">Jeju Orchid Enriched Cream 50ml</option>
+              </optgroup>
+
+              <optgroup label="Sun Care">
+                <option value="64.00">Intensive Long-lasting Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="65.00">Intensive Triple Care Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="60.00">Tone Up No Sebum Sunscreen SPF50+ PA++++ 50ml</option>
+              </optgroup>
+
+              <optgroup label="Eye Care">
+                <option value="84.00">Green Tea Seed Eye & Face Ball 10ml</option>
+                <option value="125.00">Black Tea Youth Enhancing Eye Serum 15ml</option>
+                <option value="110.00">Jeju Pomegranate Revitalizing Eye Essence 15ml</option>
+              </optgroup>
+              
+              <optgroup label="Set">
+                <option value="158.00">Brightening Pore Serum Special Set</option>
+                <option value="75.00">Volcanic Calming Pore Clay Mask Special Set</option>
+                <option value="168.00">(Jumbo Size) Black Tea Youth Enhancing Ampoule 50ml</option>
+                <option value="90.00">Jeju Cherry Blossom Tone-Up Cream SPF30 PA++ Special Set</option>
+              </optgroup>
+            </select>
+          </td>
+
+          <td class="value">
+            <input type="text" name="Price1" id="Price1" readonly size=8 class="bdr"/>
+          </td>
+          <td class="value">
+            <select name="Quantity1"  id="Quantity1" onchange="sub(this,1);" disabled>
+              <script type="text/javascript">
+                quantity();/*call quantity() function to display 11<option>tag*/
+              </script>
+            </select>
+          </td>
+          <td class="value">
+            <input type="text" name="Amount1" id="Amount1" size=10 class=numbers  value="0.00"  onchange="calculate();" disabled  />
+          </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="image/SuperVPCM.png" style="height: 100px; width: 100px;">
+            </td>
+          <td class="value">
+            <select id="product2" name="product2" onchange="display(this,2);">
+              <option selected style="text-align: center;">Please select the product that you want.</option>
+              <optgroup label="Cleanser">
+              <option value="41.00">Green Tea Foam Cleanser 150ml</option>
+              <option value="38.00">Bija Trouble Facial Foam 150ml</option>
+              <option value="24.00">Blueberry Rebalancing 5.5 Cleanser 100ml</option>
+              <option value="46.00">Brightening Pore Facial Cleanser 150ml</option>
+              <option value="33.00">Apple Seed Soft Cleansing Foam 150 ml</option>
+              <option value="39.00">Blueberry Rebalancing Cleansing Water 200ml</option>
+              </optgroup>
+
+              <optgroup label="Toner">
+                <option value="39.00">Blueberry Rebalancing Skin 150ml</option>
+                <option value="70.00">Bija Trouble Skin 200ml</option>
+                <option value="75.00">Jeju Volcanic Pore Toner 2X 200ml</option>
+                <option value="84.00">Green Tea Seed Skin 200ml</option>
+                <option value="112.00">Brightening Pore Skin 150ml</option>
+                <option value="64.80">Jeju Cherry Blossom Skin 200ml</option>
+              </optgroup>
+              
+              <optgroup label="Serum">
+                <option value="118.00">NEW Green Tea Seed Serum 80ml</option>
+                <option value="158.00">Brightening Pore Serum 30ml</option>
+              </optgroup>
+
+              <optgroup label="Mask">
+                <option value="5.00">My Real Squeeze Mask EX 20ml</option>
+                <option value="12.00">Soothing Moment for Skin Mask (MADECASSOSIDE) 25ml</option>
+                <option value="6.00">Jeju Root Energy Mask 25ml</option>
+                <option value="60.00">Super Volcanic Pore Clay Mask 2X</option>
+              </optgroup>
+
+              <optgroup label="Moisturizers">
+                <option value="61.00">Bija Trouble Lotion 100ml</option>
+                <option value="76.50">Jeju Cherry Blossom Jelly Cream 50ml</option>
+                <option value="119.00">Jeju Orchid Enriched Cream 50ml</option>
+              </optgroup>
+
+              <optgroup label="Sun Care">
+                <option value="64.00">Intensive Long-lasting Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="65.00">Intensive Triple Care Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="60.00">Tone Up No Sebum Sunscreen SPF50+ PA++++ 50ml</option>
+              </optgroup>
+
+              <optgroup label="Eye Care">
+                <option value="84.00">Green Tea Seed Eye & Face Ball 10ml</option>
+                <option value="125.00">Black Tea Youth Enhancing Eye Serum 15ml</option>
+                <option value="110.00">Jeju Pomegranate Revitalizing Eye Essence 15ml</option>
+              </optgroup>
+              
+              <optgroup label="Set">
+                <option value="158.00">Brightening Pore Serum Special Set</option>
+                <option value="75.00">Volcanic Calming Pore Clay Mask Special Set</option>
+                <option value="168.00">(Jumbo Size) Black Tea Youth Enhancing Ampoule 50ml</option>
+                <option value="90.00">Jeju Cherry Blossom Tone-Up Cream SPF30 PA++ Special Set</option>
+              </optgroup>
+            </select>
+          </td>
+
+          <td class="value">
+            <input type="text" name="Price2" id="Price2" readonly size=8 class="bdr" />
+          </td>
+          <td class="value">
+            <select name="Quantity2"  id="Quantity2" onchange="sub(this,2);" disabled class="bdr">
+              <script type="text/javascript">
+                quantity();/*call quantity() function to display 11<option>tag*/
+              </script>
+            </select>
+          </td>
+          <td class="value">
+            <input type="text" name="Amount2" id="Amount2" size=10 class=numbers  value="0.00"  onchange="calculate();"disabled class="bdr" />
+          </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="image/JejuOEC.png" style="height: 100px; width: 100px;">
+            </td>
+          <td class="value">
+            <select id="product3" name="product3" onchange="display(this,3);">
+              <option selected style="text-align: center;">Please select the product that you want.</option>
+              <optgroup label="Cleanser">
+              <option value="41.00">Green Tea Foam Cleanser 150ml</option>
+              <option value="38.00">Bija Trouble Facial Foam 150ml</option>
+              <option value="24.00">Blueberry Rebalancing 5.5 Cleanser 100ml</option>
+              <option value="46.00">Brightening Pore Facial Cleanser 150ml</option>
+              <option value="33.00">Apple Seed Soft Cleansing Foam 150 ml</option>
+              <option value="39.00">Blueberry Rebalancing Cleansing Water 200ml</option>
+              </optgroup>
+
+              <optgroup label="Toner">
+                <option value="39.00">Blueberry Rebalancing Skin 150ml</option>
+                <option value="70.00">Bija Trouble Skin 200ml</option>
+                <option value="75.00">Jeju Volcanic Pore Toner 2X 200ml</option>
+                <option value="84.00">Green Tea Seed Skin 200ml</option>
+                <option value="112.00">Brightening Pore Skin 150ml</option>
+                <option value="64.80">Jeju Cherry Blossom Skin 200ml</option>
+              </optgroup>
+              
+              <optgroup label="Serum">
+                <option value="118.00">NEW Green Tea Seed Serum 80ml</option>
+                <option value="158.00">Brightening Pore Serum 30ml</option>
+              </optgroup>
+
+              <optgroup label="Mask">
+                <option value="5.00">My Real Squeeze Mask EX 20ml</option>
+                <option value="12.00">Soothing Moment for Skin Mask (MADECASSOSIDE) 25ml</option>
+                <option value="6.00">Jeju Root Energy Mask 25ml</option>
+                <option value="60.00">Super Volcanic Pore Clay Mask 2X</option>
+              </optgroup>
+
+              <optgroup label="Moisturizers">
+                <option value="61.00">Bija Trouble Lotion 100ml</option>
+                <option value="76.50">Jeju Cherry Blossom Jelly Cream 50ml</option>
+                <option value="119.00">Jeju Orchid Enriched Cream 50ml</option>
+              </optgroup>
+
+              <optgroup label="Sun Care">
+                <option value="64.00">Intensive Long-lasting Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="65.00">Intensive Triple Care Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="60.00">Tone Up No Sebum Sunscreen SPF50+ PA++++ 50ml</option>
+              </optgroup>
+
+              <optgroup label="Eye Care">
+                <option value="84.00">Green Tea Seed Eye & Face Ball 10ml</option>
+                <option value="125.00">Black Tea Youth Enhancing Eye Serum 15ml</option>
+                <option value="110.00">Jeju Pomegranate Revitalizing Eye Essence 15ml</option>
+              </optgroup>
+              
+              <optgroup label="Set">
+                <option value="158.00">Brightening Pore Serum Special Set</option>
+                <option value="75.00">Volcanic Calming Pore Clay Mask Special Set</option>
+                <option value="168.00">(Jumbo Size) Black Tea Youth Enhancing Ampoule 50ml</option>
+                <option value="90.00">Jeju Cherry Blossom Tone-Up Cream SPF30 PA++ Special Set</option>
+              </optgroup>
+            </select>
+          </td>
+
+          <td class="value">
+            <input type="text" name="Price3" id="Price3" readonly size=8 class="bdr" />
+          </td>
+          <td class="value">
+            <select name="Quantity3"  id="Quantity3" onchange="sub(this,3);" disabled class="bdr">
+              <script type="text/javascript">
+                quantity();/*call quantity() function to display 11<option>tag*/
+              </script>
+            </select>
+          </td>
+          <td class="value">
+            <input type="text" name="Amount3" id="Amount3" size=10 class=numbers  value="0.00"  onchange="calculate();" disabled class="bdr" />
+          </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="image/sets4_cherry.png" style="height: 100px; width: 100px;">
+            </td>
+          <td class="value">
+            <select id="product4" name="product4" onchange="display(this,4);">
+              <option selected style="text-align: center;">Please select the product that you want.</option>
+              <optgroup label="Cleanser">
+              <option value="41.00">Green Tea Foam Cleanser 150ml</option>
+              <option value="38.00">Bija Trouble Facial Foam 150ml</option>
+              <option value="24.00">Blueberry Rebalancing 5.5 Cleanser 100ml</option>
+              <option value="46.00">Brightening Pore Facial Cleanser 150ml</option>
+              <option value="33.00">Apple Seed Soft Cleansing Foam 150 ml</option>
+              <option value="39.00">Blueberry Rebalancing Cleansing Water 200ml</option>
+              </optgroup>
+
+              <optgroup label="Toner">
+                <option value="39.00">Blueberry Rebalancing Skin 150ml</option>
+                <option value="70.00">Bija Trouble Skin 200ml</option>
+                <option value="75.00">Jeju Volcanic Pore Toner 2X 200ml</option>
+                <option value="84.00">Green Tea Seed Skin 200ml</option>
+                <option value="112.00">Brightening Pore Skin 150ml</option>
+                <option value="64.80">Jeju Cherry Blossom Skin 200ml</option>
+              </optgroup>
+              
+              <optgroup label="Serum">
+                <option value="118.00">NEW Green Tea Seed Serum 80ml</option>
+                <option value="158.00">Brightening Pore Serum 30ml</option>
+              </optgroup>
+
+              <optgroup label="Mask">
+                <option value="5.00">My Real Squeeze Mask EX 20ml</option>
+                <option value="12.00">Soothing Moment for Skin Mask (MADECASSOSIDE) 25ml</option>
+                <option value="6.00">Jeju Root Energy Mask 25ml</option>
+                <option value="60.00">Super Volcanic Pore Clay Mask 2X</option>
+              </optgroup>
+
+              <optgroup label="Moisturizers">
+                <option value="61.00">Bija Trouble Lotion 100ml</option>
+                <option value="76.50">Jeju Cherry Blossom Jelly Cream 50ml</option>
+                <option value="119.00">Jeju Orchid Enriched Cream 50ml</option>
+              </optgroup>
+
+              <optgroup label="Sun Care">
+                <option value="64.00">Intensive Long-lasting Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="65.00">Intensive Triple Care Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="60.00">Tone Up No Sebum Sunscreen SPF50+ PA++++ 50ml</option>
+              </optgroup>
+
+              <optgroup label="Eye Care">
+                <option value="84.00">Green Tea Seed Eye & Face Ball 10ml</option>
+                <option value="125.00">Black Tea Youth Enhancing Eye Serum 15ml</option>
+                <option value="110.00">Jeju Pomegranate Revitalizing Eye Essence 15ml</option>
+              </optgroup>
+              
+              <optgroup label="Set">
+                <option value="158.00">Brightening Pore Serum Special Set</option>
+                <option value="75.00">Volcanic Calming Pore Clay Mask Special Set</option>
+                <option value="168.00">(Jumbo Size) Black Tea Youth Enhancing Ampoule 50ml</option>
+                <option value="90.00">Jeju Cherry Blossom Tone-Up Cream SPF30 PA++ Special Set</option>
+              </optgroup>
+            </select>
+          </td>
+
+          <td class="value">
+            <input type="text" name="Price4" id="Price4" readonly size=8 class="bdr"/>
+          </td>
+          <td class="value">
+            <select name="Quantity4"  id="Quantity4" onchange="sub(this,4);" disabled class="bdr">
+              <script type="text/javascript">
+                quantity();/*call quantity() function to display 11<option>tag*/
+              </script>
+            </select>
+          </td>
+          <td class="value">
+            <input type="text" name="Amount4" id="Amount4" size=10 class=numbers  value="0.00"  onchange="calculate();" disabled class="bdr" />
+          </td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="image/cleanser4.2.png" style="height: 100px; width: 100px;">
+            </td>
+          <td class="value">
+            <select id="product5" name="product5" onchange="display(this,5);">
+              <option selected style="text-align: center;">Please select the product that you want.</option>
+              <optgroup label="Cleanser">
+              <option value="41.00">Green Tea Foam Cleanser 150ml</option>
+              <option value="38.00">Bija Trouble Facial Foam 150ml</option>
+              <option value="24.00">Blueberry Rebalancing 5.5 Cleanser 100ml</option>
+              <option value="46.00">Brightening Pore Facial Cleanser 150ml</option>
+              <option value="33.00">Apple Seed Soft Cleansing Foam 150 ml</option>
+              <option value="39.00">Blueberry Rebalancing Cleansing Water 200ml</option>
+              </optgroup>
+
+              <optgroup label="Toner">
+                <option value="39.00">Blueberry Rebalancing Skin 150ml</option>
+                <option value="70.00">Bija Trouble Skin 200ml</option>
+                <option value="75.00">Jeju Volcanic Pore Toner 2X 200ml</option>
+                <option value="84.00">Green Tea Seed Skin 200ml</option>
+                <option value="112.00">Brightening Pore Skin 150ml</option>
+                <option value="64.80">Jeju Cherry Blossom Skin 200ml</option>
+              </optgroup>
+              
+              <optgroup label="Serum">
+                <option value="118.00">NEW Green Tea Seed Serum 80ml</option>
+                <option value="158.00">Brightening Pore Serum 30ml</option>
+              </optgroup>
+
+              <optgroup label="Mask">
+                <option value="5.00">My Real Squeeze Mask EX 20ml</option>
+                <option value="12.00">Soothing Moment for Skin Mask (MADECASSOSIDE) 25ml</option>
+                <option value="6.00">Jeju Root Energy Mask 25ml</option>
+                <option value="60.00">Super Volcanic Pore Clay Mask 2X</option>
+              </optgroup>
+
+              <optgroup label="Moisturizers">
+                <option value="61.00">Bija Trouble Lotion 100ml</option>
+                <option value="76.50">Jeju Cherry Blossom Jelly Cream 50ml</option>
+                <option value="119.00">Jeju Orchid Enriched Cream 50ml</option>
+              </optgroup>
+
+              <optgroup label="Sun Care">
+                <option value="64.00">Intensive Long-lasting Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="65.00">Intensive Triple Care Sunscreen SPF50+ PA++++ 50ml</option>
+                <option value="60.00">Tone Up No Sebum Sunscreen SPF50+ PA++++ 50ml</option>
+              </optgroup>
+
+              <optgroup label="Eye Care">
+                <option value="84.00">Green Tea Seed Eye & Face Ball 10ml</option>
+                <option value="125.00">Black Tea Youth Enhancing Eye Serum 15ml</option>
+                <option value="110.00">Jeju Pomegranate Revitalizing Eye Essence 15ml</option>
+              </optgroup>
+              
+              <optgroup label="Set">
+                <option value="158.00">Brightening Pore Serum Special Set</option>
+                <option value="75.00">Volcanic Calming Pore Clay Mask Special Set</option>
+                <option value="168.00">(Jumbo Size) Black Tea Youth Enhancing Ampoule 50ml</option>
+                <option value="90.00">Jeju Cherry Blossom Tone-Up Cream SPF30 PA++ Special Set</option>
+              </optgroup>
+            </select>
+          </td>
+
+          <td class="value">
+            <input type="text" name="Price5" id="Price5" readonly size=8 class="bdr" />
+          </td>
+          <td class="value">
+            <select name="Quantity5"  id="Quantity5" onchange="sub(this,5);" disabled class="bdr">
+              <script type="text/javascript">
+                quantity();/*call quantity() function to display 11<option>tag*/
+              </script>
+            </select>
+          </td>
+          <td class="value">
+            <input type="text" name="Amount5" id="Amount5" size=10 class=numbers  value="0.00"  onchange="calculate();" disabled class="bdr" />
+          </td>
+        </tr>
+
+        <tr>
+          <td align=right colspan=4>Subtotal  :</td>
+          <td><input type="text" name="subtotal" id="subtotal" size="10"   value="0.00"disabled  class="bdr"/></td>
+      </tr>
+      <tr>
+          <td align=right colspan=4>Shipping price
+              <select name="ship" class="list" id="ship" onchange="shipprice();" class="bdr">
+              <option >Shipping Details</option>
+              <option value="20.00">East Malaysia</option>
+              <option value="12.00">West Malaysia</option>
+              </select>  :</td>
+          <td><span style="font-size:large;font-weight:bold" id="shipping"></span></td>
+      </tr>
+      <tr>
+          <td align=right colspan=4>Total  :</td>
+          <td><span style="font-size:large;font-weight:bold" id="total" class="bdr"></span></td>
+      </tr>
+    </table>
+  </fieldset><br/><br/>
+
+
+
+<div class="form">
+  <fieldset class="form1">
+    <legend align="center"><h2>Billing Details</h2></legend>
+    <table id="cart" align="center">
+        <tr>
+            <td><label for="name"><span style="color:red;">*</span>Name</label></td>
+            <td><input type="text" id="name" name="name" size="20" required></td>
+        </tr>
+        <tr>
+            <td><label for="address"><span style="color:red;">*</span>House No.,Road</label></td>
+            <td><input type="text" id="address" name="address" size="50" required onchange="shippingaddress();"></td>
+        </tr>
+        <tr>
+            <td><label for="state"><span style="color:red;">*</span>State</label></td>
+            <td><input type="text" id="state" name="state" size="25" required onchange="shippingaddress();"></td>
+        </tr>
+        <tr>
+            <td><label for="postcode"><span style="color:red;">*</span>Postcode</label></td>
+            <td><input type="text" id="postcode" name="postcode" size="25" required onchange="shippingaddress();"></td>
+        </tr>
+        <tr>
+            <td><label for="tel"><span style="color:red;">*</span>Telephone NO.</label></td>
+            <td><input type="tel" id="tel" name="tel" size="25" maxlength="11" required></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email Address</label></td>
+            <td><input type="email" id="email" name="email" size="25" required></td>
+        </tr>
+        <tr>
+          <td><label for="date"> Order Date:</label></td>
+          <td><input type="text" name="date" id="date" size="10"  class=numbers disabled/></td>
+        </tr>
+    </table>
+</fieldset><br/><br/>
+<fieldset class="form1">
+    <legend align="center"><h2>Payment Details</h2></legend>
+        <table id="cart" align="center">
+            <tr>
+                <td><label for="card">Credit Card</label></td>
+                <td>
+                    <input type="radio" id="masterCard" name="card" value="masterCard">
+                    <label for="masterCard">Master Card</label>
+                    <input type="radio" id="visaCard" name="card" value="visa">
+                    <label for="visa">Visa Card</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="cardName">Name on Card</label></td>
+                <td><input type="text" id="cardName" name="cardName" size="40" required></td>
+            </tr>
+            <tr>
+              <td><label for="cardNum">Card Number</label></td>
+              <td><input type="text" id="cardNum" name="cardNum" size="20" minlength="16" maxlength="16" required placeholder="xxxx-xxxx-xxxx-xxxx"></td>
+            </tr>
+            <tr>
+                <td><label for="month">Expiration Date</label></td>
+                <td><input type="text" id="month" name="month" list="months"/>
+                    <datalist id="months">
+                        <option value="January"></option>
+                        <option value="February"></option>
+                        <option value="March"></option>
+                        <option value="April"></option>
+                        <option value="May"></option>
+                        <option value="June"></option>
+                        <option value="July"></option>
+                        <option value="August"></option>
+                        <option value="September"></option>
+                        <option value="October"></option>
+                        <option value="November"></option>
+                        <option value="December"></option>
+                    </datalist>
+                    <input type="text" id="year" name="year" list="years"/></td>
+                    <datalist id="years">
+                      <option value="2020"></option>
+                      <option value="2021"></option>
+                      <option value="2022"></option>
+                      <option value="2023"></option>
+                      <option value="2024"></option>
+                      <option value="2025"></option>
+                  </datalist>
+              </td>
+            </tr>
+        </table>
+</fieldset>
+</div>
+<br/><br/>
+<br/><br/>
+<div>
+<input type="submit" value="Proceed to checkout" class="checkout" >
+</div>
+</form>
+
+
+
+
+ 
+<footer>
+  <div><img src="image/Cosmetic1.png" class="logo-footer"></div>
+     <div class="quick-link1">
+        <div class="titlefooter1">Sweet Face</div>
+        <ul>
+           <li><a href="contactus.html" class="a-link">Contact Us</a></li>
+        </ul>
+     </div>
+     <div class="quick-link2">
+      <div class="titlefooter2">Customer Services</div>
+      <ul>
+         <li><a href="TnC.html" class="a-link">Term & Conditions</a></li>
+         <li><a href="FAQS.html" class="a-link">FAQ</a></li>
+      </ul>
+    </div>
+ <p class="copyrights">
+     <i>Copyright © 2021 Sweet Face. All Rights Reserved</i>
+ </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+.head{
+    background-color: black;
+}
+.logo1{
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu1{
+  position:sticky;
+  height: 75px;
+  width: 100%;
+}
+
+.menu{
+    background: rgb(76, 38, 143);
+    text-align:center;
+    
+}
+
+.menu-ul{
+    margin: 0px;
+    padding: 0;
+    display: inline;
+}
+
+.menu-ul li {
+    font-size: 17px;
+    list-style: none;
+    display:inline-block;
+    padding: 25px 25px 25px 25px;
+}
+
+.a-menu{
+    text-decoration: none;
+    color: white;
+
+}
+
+.menu-ul li:hover{
+    color: black;
+    background: rgb(213, 242, 255);
+    transform:scale(1.1);
+}
+
+.search-box{
+    border: 3px solid black;
+    border-radius:70px;
+    background: white;
+    width:max-content;
+    display:inline-block;
+}
+
+.search-box:hover{  
+    box-shadow:0 0 10px 2px rgb(135, 215, 252);
+    border: 1px solid rgb(192, 231, 250);
+}
+
+.search-input{
+    width: 252px;
+    border:none;
+    background:transparent;
+    margin:15px 0px 15px 10px ;
+    vertical-align: center;
+}
+
+
+footer{
+    background: rgba(0,0,0,1.0);
+    margin: auto;
+    text-align: right;
+    z-index: 2;
+}
+
+.logo-footer{
+    float: left;
+    width: 200px;
+    vertical-align: bottom;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.quick-link1{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.quick-link2{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 25%; 
+    margin-right:5%;
+}
+
+
+.titlefooter1 {
+    text-decoration: underline;
+}
+
+.titlefooter2 {
+    text-decoration: underline;
+}
+
+
+.quick-link1 li   {
+    list-style: none;
+    padding: 10px 0px;
+    font-weight: 300;
+}
+
+.quick-link2 li {
+    list-style: none;
+    padding: 10px 0px;
+    font-weight: 300;
+}
+
+.a-link{
+    text-decoration: none;
+    color: white;
+
+}
+
+.a-link:hover {
+    color: #fd5e53;
+}
+
+.copyrights{
+    font-size: 16px;
+    font-family: verdana, arial, helvecita , sans-serif;
+    text-align: center;
+    margin: auto;
+    color: white;
+
+}
